@@ -1,10 +1,11 @@
-import * as mutations from "@/src/graphql/mutations";
-import * as queries from "@/src/graphql/queries";
 import { generateServerClientUsingCookies } from "@aws-amplify/adapter-nextjs/api";
+import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 
+import * as mutations from "@/src/graphql/mutations";
+import * as queries from "@/src/graphql/queries";
+
 import config from "@/src/amplifyconfiguration.json";
-import { revalidatePath } from "next/cache";
 
 export const cookiesClient = generateServerClientUsingCookies({
   config,

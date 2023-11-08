@@ -1,15 +1,14 @@
-import ConfigureAmplifyClientSide from "@/components/ConfigureAmplify";
-import '@aws-amplify/ui-react/styles.css';
+import "@aws-amplify/ui-react/styles.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <ConfigureAmplifyClientSide />
+      {/*<ConfigureAmplifyClientSide />*/}
       <body>{children}</body>
     </html>
-  )
+  );
 }
