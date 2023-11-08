@@ -5,7 +5,7 @@ import { cookies } from "next/headers";
 import config from "@/src/amplifyconfiguration.json";
 
 export const cookiesClient = generateServerClientUsingCookies({
-  config: config as any,
+  config,
   cookies,
 });
 
